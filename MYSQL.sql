@@ -49,7 +49,7 @@ region varchar(30));
 
 CREATE TABLE parameter_roster(
 line_num INT PRIMARY KEY AUTO_INCREMENT,
-parameter_name VARCAHR(30) NOT NULL,
+parameter_name VARCHAR(30) NOT NULL,
 parameter_value VARCHAR(20) NOT NULL)
 
 
