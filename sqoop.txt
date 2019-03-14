@@ -1,0 +1,29 @@
+Python script -- > param file for oozie -- > oozie workflow with sqoop action
+
+Incremental Import data from IN table for every day
+
+sqoop import --connect jdbc:mysql://localhost:3306/employeeRoster \
+--username root \
+--password admin \
+--table EMPLOYEEINDEMO \
+--split-by inc_sk \
+--target-dir /sqoop/demo/table
+
+Incremental import data for Out table for every day
+
+sqoop import --connect jdbc:mysql://localhost:3306/employeeRoster \
+--username root \
+--password admin \
+--table EMPLOYEEINDEMO \
+--split-by inc_sk \
+--target-dir /sqoop/demo/table
+
+
+Incremental import of every 15 days of roster.
+
+sqoop import --connect jdbc:mysql://localhost:3306/employeeRoster \
+--username root \
+--password admin \
+--table EMPLOYEEINDEMO \
+--split-by inc_sk \
+--target-dir /sqoop/demo/table
