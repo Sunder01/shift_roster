@@ -1,0 +1,1 @@
+sqoop.cmd import -Dmapreduce.job.user.classpath.first=true --connect jdbc:mysql://localhost:3306/demo --driver com.mysql.jdbc.Driver --username root --password admin --table emp --split-by id -m1 --target-dir /sqoop/demo/ --compression-codec org.apache.hadoop.io.compress.SnappyCodec --as-avrodatafile
